@@ -1,12 +1,9 @@
-import { defineConfig } from 'eslint/config';
+import js from '@eslint/js';
+import eslintConfigPrettier from 'eslint-config-prettier/flat';
 
-export default defineConfig([
+export default [
+  js.configs.recommended,
   {
-    languageOptions: {
-      globals: {},
-    },
-
-    extends: ['eslint:recommended', 'prettier'],
     rules: {
       'no-var': 'error',
       semi: 'error',
@@ -17,5 +14,9 @@ export default defineConfig([
       'prefer-const': 'error',
       'no-use-before-define': 'error',
     },
+    languageOptions: {
+      globals: {},
+    },
   },
-]);
+  eslintConfigPrettier,
+];

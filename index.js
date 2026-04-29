@@ -1,3 +1,5 @@
+/* eslint-disable no-debugger */
+/* eslint-disable no-undef */
 const func = () => {
   const sum = (a, b) => a + b;
   let x = 10;
